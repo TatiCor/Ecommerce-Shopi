@@ -73,6 +73,8 @@ export const ShoppingCartProvider = ({children}) => {
       .then(data => setItems(data))
   }, [])
 
+  
+
   const filteredItemsByTitle = (items, searchByTitle) => {
     return items?.filter(item => item.title.toLowerCase().includes(searchByTitle.toLowerCase()))
   }

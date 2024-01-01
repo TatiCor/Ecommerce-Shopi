@@ -25,8 +25,13 @@ const CheckoutSideMenu = () => {
     }
 
     const ordersString = localStorage.getItem('orders');
-    const orders = ordersString ? JSON.parse(ordersString) : [];
+    let orders = ordersString ? JSON.parse(ordersString) : [];
+    
+    if (!Array.isArray(orders)) {
+      orders = [];
+    }
     orders.push(orderToAdd);
+    localStorage.setItem('orders', JSON.stringify(orders));
     localStorage.setItem('orders', JSON.stringify(orders));
 
     context.setOrder([...context.order, orderToAdd])
