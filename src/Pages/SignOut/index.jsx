@@ -58,7 +58,7 @@ function SignOut() {
           />
 
           <div className='flex flex-col w-full'>
-            <Link to="/" className='flex justify-center '>
+            <Link to="/Ecommerce-Shopi/" className='flex justify-center '>
               <button
                 className='bg-black text-white w-full  my-4 p-2 rounded-md font-bold'
                 disabled={!hasAnAccount}
